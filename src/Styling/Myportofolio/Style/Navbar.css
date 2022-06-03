@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 20px 0;
+  font-family: 'Ubuntu', sans-serif;
+  transition: all 0.3s ease;
+}
+.navbar.sticky {
+  padding: 10px 0;
+  background: #007acc;
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+}
+.navbar a span {
+  color: #007acc;
+  transition: all 0.3s ease;
+}
+.navbar.sticky a span {
+  color: #fff;
+}
+.navbar li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar li a {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 18px;
+  transition: color 0.3s ease;
+}
+.navbar li a:hover {
+  color: #007acc;
+  border-bottom: 5px solid #007acc;
+}
+.navbar.sticky li a:hover {
+  color: #fff;
+}
+.navbar-toggler-icon {
+  color: #fff;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  display: inline;
+}

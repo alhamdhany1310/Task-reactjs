@@ -1,0 +1,11 @@
+$black: black;
+$putih: white;
+$biru: blue;
+.btn {
+  border: 2px solid $black;
+  background-color: $putih;
+  color: $black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}

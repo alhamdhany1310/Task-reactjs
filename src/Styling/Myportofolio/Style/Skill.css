@@ -1,0 +1,38 @@
+#skill,
+#contact {
+  color: #fff;
+  background: #183153;
+}
+#skill .title::before,
+#contact .title::before {
+  background: #fff;
+}
+#skill .title::after {
+  background: #183153;
+  content: 'What i Know';
+}
+.skill-img {
+  height: 400px;
+  width: 400px;
+}
+.accordion .accordion-button {
+  color: #007acc;
+  border: #007acc;
+  background: #183153;
+  font-family: 'Ubuntu', sans-serif;
+}
+.accordion .accordion-body {
+  background: #183153;
+  color: #fff;
+}
+@media (max-width: 500px) {
+  .about-img {
+    margin-top: 12px;
+    height: 400px;
+    width: 360px;
+  }
+  .accordion {
+    padding-left: 4px;
+    margin-top: 12px;
+  }
+}

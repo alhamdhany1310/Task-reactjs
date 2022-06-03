@@ -1,0 +1,69 @@
+.title {
+  padding-top: 3rem;
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.title::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+.title::after {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  color: #007acc;
+  padding: 0 5px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+#bio .title::after {
+  content: 'who i am';
+}
+p {
+  font-size: 20px;
+  text-align: justify;
+}
+h3 {
+  font-family: 'Ubuntu', sans-serif;
+}
+.btn-primary {
+  font-size: 20px;
+  padding: 10px 30px;
+  border: 2px solid #007acc;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.btn-primary:hover {
+  color: #007acc;
+  background: none;
+}
+.about-img {
+  height: 500px;
+  width: 500px;
+  /* padding-bottom: 2rem; */
+  object-fit: cover;
+  border-radius: 8px;
+}
+@media (max-width: 500px) {
+  .about-img {
+    margin-top: 12px;
+    height: 400px;
+    width: 360px;
+  }
+  h3 {
+    font-size: 19px;
+  }
+}
