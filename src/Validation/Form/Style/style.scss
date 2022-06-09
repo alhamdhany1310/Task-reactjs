@@ -1,0 +1,43 @@
+$putih: #ffffff;
+$black: rgba(0, 0, 0, 0.2);
+$hitam: rgba(0, 0, 0, 0.24);
+section {
+  padding: 153px;
+  background: url('https://wallup.net/wp-content/uploads/2017/11/23/502910-Firewatch-night-forest.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  .container {
+    position: relative;
+    z-index: 1;
+    background: $putih;
+    max-width: 350px;
+    border-radius: 10px;
+    margin: 0 auto 100px;
+    padding: 30px;
+    //   text-align: center;
+    box-shadow: 0 0 20px 0 $black, 0 5px 5px 0 $hitam;
+  }
+  .placeholder {
+    position: absolute;
+    top: 0;
+    padding: 2px 0 0 13px;
+    transition: all 200ms;
+    opacity: 0.5;
+  }
+
+  .form-control:focus + .placeholder,
+  .form-control:valid + .placeholder {
+    font-size: 75%;
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+  }
+}
