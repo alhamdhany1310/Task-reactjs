@@ -13,6 +13,7 @@ class Register extends React.Component {
   //   this.pwdConfirm = this.pwdConfirm.bind(this);
   //   this.handleSubmit = this.handleSubmit.bind(this);
   // }
+
   state = {
     firstname: '',
     scoundName: '',
@@ -20,6 +21,7 @@ class Register extends React.Component {
     password: '',
     gender: '',
     jurusan: '',
+    isValid: false,
     // compassword: '',
   };
   handleReset = () => {
@@ -46,16 +48,18 @@ class Register extends React.Component {
       // compassword: 'min:8',
     };
     let validation = new Validator(data, rules);
-    validation.passes();
+
     this.setState({
       errors: [...validation.errors.get('firstname'), ...validation.errors.get('scoundName'), ...validation.errors.get('password'), ...validation.errors.get('gender'), ...validation.errors.get('jurusan')],
     });
-    console.log(`
+    if (validation.passes()) {
+      console.log(`
       nama lengkap : ${this.state.firstname} ${this.state.scoundName}
       email : ${this.state.email}
       password : ${this.state.password}
       gender : ${this.state.gender}
       jurusan : ${this.state.jurusan}`);
+    }
 
     this.handleReset();
     // if (this.validasi()) {
@@ -63,6 +67,26 @@ class Register extends React.Component {
     //   input['password'] = '';
     //   input['compassword'] = '';
     // }
+  };
+  handleChange = () => {
+    const { firstname, scoundName, password, gender, jurusan } = this.state;
+    let data = { firstname, scoundName, password, gender, jurusan };
+    let rules = {
+      firstname: 'required',
+      scoundName: 'required',
+      password: 'min:8',
+      gender: 'required',
+      jurusan: 'required',
+      // compassword: 'min:8',
+    };
+    let validation = new Validator(data, rules);
+
+    this.setState({
+      errors: [...validation.errors.get('firstname'), ...validation.errors.get('scoundName'), ...validation.errors.get('password'), ...validation.errors.get('gender'), ...validation.errors.get('jurusan')],
+    });
+    if (validation.passes()) {
+      this.setState({ isValid: true });
+    }
   };
   // pwdConfirm(e) {
   //   var inputpwd = this.state;
@@ -85,7 +109,7 @@ class Register extends React.Component {
   render() {
     return (
       <section>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} onChange={this.handleChange}>
           <div className="container">
             {this.state.errors && <ShowErrors errors={this.state.errors} />}
             <div className="row">
@@ -125,7 +149,7 @@ class Register extends React.Component {
             {/* <Input type="password" placeholder="Konfirmasi Password" value={this.state.compassword} name="compassword" onChange={(value) => this.setState({ compassword: value }, () => console.log(this.state))} className="form-control" /> */}
             {/* <div className="text-danger">{this.state.msg.password}</div>
             <div className="text-success">{this.state.msg.compassword}</div> */}
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" disabled={!this.state.isValid} className="btn btn-primary">
               Registrasi
             </button>
           </div>
