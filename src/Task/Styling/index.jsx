@@ -1,11 +1,11 @@
 import React from 'react';
-import Jumbotron from './Myportofolio/Jumbotron';
-import Navbar from './Myportofolio/Navbar';
-import About from './Myportofolio/About';
-import Skill from './Myportofolio/Skill';
-import Portofolio from './Myportofolio/Portofolio';
-import Contact from './Myportofolio/Contact';
-import Footer from './Myportofolio/Footer';
+import Navbar from '../Component/Navbar';
+import Jumbotron from './Pages/Jumbotron';
+import About from './Pages/About';
+import Skill from './Pages/Skill';
+import Portofolio from './Pages/Portofolio';
+import Contact from './Pages/Contact';
+import Footer from './Pages/Footer';
 // import Sass from './Myportofolio/scss';
 export default class Styling extends React.Component {
   render() {

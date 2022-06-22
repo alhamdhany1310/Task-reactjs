@@ -56,7 +56,7 @@ class News extends React.Component {
     });
   };
   render() {
-    const { search } = this.state;
+    const { search } = this.state.news;
     return (
       <div>
         <nav className="navbar bg-light pixed-top">

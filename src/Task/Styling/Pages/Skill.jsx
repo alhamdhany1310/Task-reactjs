@@ -1,6 +1,6 @@
 import React from 'react';
-import './Style/Skill.css';
-import oke from './image/oke.png';
+import '../Style/Skill.css';
+import oke from '../image/oke.png';
 class Skill extends React.Component {
   render() {
     return (

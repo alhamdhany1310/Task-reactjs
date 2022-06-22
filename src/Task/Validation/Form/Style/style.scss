@@ -1,7 +1,7 @@
 $putih: #ffffff;
 $black: rgba(0, 0, 0, 0.2);
 $hitam: rgba(0, 0, 0, 0.24);
-section {
+.section {
   padding: 153px;
   background: url('https://wallup.net/wp-content/uploads/2017/11/23/502910-Firewatch-night-forest.jpg');
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@ section {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  .container {
+  .container1 {
     position: relative;
     z-index: 1;
     background: $putih;

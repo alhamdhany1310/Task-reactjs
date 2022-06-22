@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import './Style/About.css';
-import img from './image/img.jpg';
+import '../Style/About.css';
+import img from '../image/img.jpg';
 const About = () => {
   const { text } = useTypewriter({
     words: ['Web Developer', 'Content Creator', 'Youtuber', 'Blogger'],

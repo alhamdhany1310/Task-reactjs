@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import './Style/Jumbotron.css';
+import '../Style/Jumbotron.css';
 const Jumbotron = () => {
   const { text } = useTypewriter({
     words: ['Web Developer', 'Content Creator', 'Youtuber', 'Blogger'],

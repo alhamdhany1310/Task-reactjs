@@ -38,7 +38,7 @@
 }
 .navbar li a:hover {
   color: #007acc;
-  border-bottom: 5px solid #007acc;
+  /* border-bottom: 5px solid #007acc; */
 }
 .navbar.sticky li a:hover {
   color: #fff;
